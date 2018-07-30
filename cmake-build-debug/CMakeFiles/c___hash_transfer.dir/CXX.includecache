@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jaak/Git/c-_hash_transfer/Hashpipe.cpp
+cstring
+-
+Hashpipe.h
+/home/jaak/Git/c-_hash_transfer/Hashpipe.h
+
+/home/jaak/Git/c-_hash_transfer/Hashpipe.h
+vector
+-
+array
+-
+string
+-
+iostream
+-
+openssl/sha.h
+-
+

@@ -1,0 +1,26 @@
+30/05/2018:
+PROBLEEM:
+    Wow, daar was nou groot probleme gewees... Ek het die openssl install en als, die sha.h file kon die ding gekry het maar die funksies om die hash uit te werk ... wou nie gewerk het nie. 
+
+OPLOSSING:
+    Blykbaar kan mens in die CMakelists gaan stel waar die libraries is wat hy moet import. Daar is ook directories as jy dit later wou gebruik.
+
+    Ek gaan net hier onder presies die stappe sit wat ek gebruik het om die openssl op die rekenaar te install. Ek sien daar was, maar dis net lekker om onnodige goed te doen...
+
+    >cd Downloads
+    >wget https://www.openssl.org/source/openssl-1.1.1-pre7.tar.gz
+    >tar -xvzf openssl-1.1.1-pre7.tar.gz
+
+    >sudo mkdir /opt/openssl && mkdir /tmp/openssl
+    >cd /tmp/openssl
+    >sudo ~/Downloads/openssl-1.1.1-pre7/config --prefix=/opt/openssl --openssldir=/opt/openssl no-shared
+    >sudo make test
+    >sudo make depend && make _all
+    >sudo make install
+
+    ... en dan is jy shap met die install.
+
+    Gaan sit net in jou projek se CMakelists:
+
+        link_libraries(crypto)
+        link_libraries(ssl)
