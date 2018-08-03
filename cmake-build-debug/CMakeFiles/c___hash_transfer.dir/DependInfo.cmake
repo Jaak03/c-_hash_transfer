@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jaak/Git/c-_hash_transfer/Hashpipe.cpp" "/home/jaak/Git/c-_hash_transfer/cmake-build-debug/CMakeFiles/c___hash_transfer.dir/Hashpipe.cpp.o"
-  "/home/jaak/Git/c-_hash_transfer/main.cpp" "/home/jaak/Git/c-_hash_transfer/cmake-build-debug/CMakeFiles/c___hash_transfer.dir/main.cpp.o"
+  "/home/user/git/c-_hash_transfer/Hashpipe.cpp" "/home/user/git/c-_hash_transfer/cmake-build-debug/CMakeFiles/c___hash_transfer.dir/Hashpipe.cpp.o"
+  "/home/user/git/c-_hash_transfer/main.cpp" "/home/user/git/c-_hash_transfer/cmake-build-debug/CMakeFiles/c___hash_transfer.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

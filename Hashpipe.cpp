@@ -121,19 +121,25 @@ std::vector<unsigned char> Hashpipe::enc(unsigned char* _key, unsigned char* _ms
      * char * wees.
      */
 
-<<<<<<< HEAD
     unsigned char* iv = getHash((unsigned char*)"Sal die stuk moet verander in die regte program.");
-    unsigned char* key = getHash((unsigned char*)"Die is die key waarmee die file gesluit word.");
 
     unsigned char* text = (unsigned char*)"Die teks wat encrypt moet word.";
 
     unsigned char cipher[BUFFER_SIZE];
     unsigned char decrypted[BUFFER_SIZE];
-=======
-    //unsigned char* iv = getHash((unsigned char*)"Sal die stuk moet verander in die regte program.");
-    vector<unsigned char> tmp = toCArray(_msg);
-    return tmp;
->>>>>>> encryption
+
+    //pad die user message
+    vector<unsigned char> userData = toCArray(_msg);
+    userData.push_back(0);
+
+    //stel die key op
+    AES_KEY* aesKey = new AES_KEY();
+    AES_set_encrypt_key(_key,256,aesKey);
+
+    //doen die enkripsie
+    unsigned char E
+
+    //return ;
 }
 
 void Hashpipe::messageDump()
@@ -158,8 +164,18 @@ std::vector<unsigned char> Hashpipe::toCArray(std::string _sInData)
 std::vector<unsigned char> Hashpipe::toCArray(unsigned char* _sInData)
 {
     std::vector<unsigned char> res;
-    for(char kar : _sInData)
-        res.push_back(kar);
+    //for(int i = 0; i < sizeof(_sInData); i++)
+    //for(unsigned char &kar: _sInData)
+    /*
+     * Hier is nogals 'n goeie manier om deur die array te gaan. Ek het lank gevat om dit uit te figure, maar aan die
+     * einde van die array is daar 'n null. So run net terwyl die element nie null is nie.
+     */
+    int i = 0;
+    while(_sInData[i])
+    {
+        cout << _sInData[i] << endl;
+        res.push_back(_sInData[i++]);
+    }
     return res;
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

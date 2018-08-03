@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/c___hash_transfer.dir/main.cpp.o CMakeFiles/c___hash_transfer.dir/Hashpipe.cpp.o  -o c___hash_transfer  -L/home/jaak/Git/c-_hash_transfer/openssl -Wl,-rpath,/home/jaak/Git/c-_hash_transfer/openssl -lcrypto -lssl 
+/usr/bin/c++  -g   CMakeFiles/c___hash_transfer.dir/main.cpp.o CMakeFiles/c___hash_transfer.dir/Hashpipe.cpp.o  -o c___hash_transfer  -L/home/user/git/c-_hash_transfer/openssl -Wl,-rpath,/home/user/git/c-_hash_transfer/openssl -lcrypto -lssl 

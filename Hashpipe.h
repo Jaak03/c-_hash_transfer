@@ -6,6 +6,7 @@
 #include <string>
 #include <iostream>
 #include <openssl/sha.h>
+#include <openssl/aes.h>
 
 using namespace std;
 
